@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import api from '../api/client';
 import { User } from '../types';
 
+
 interface AuthContextType {
   user: User | null;
   token: string | null;

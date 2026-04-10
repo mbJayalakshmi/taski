@@ -1,9 +1,12 @@
-import axios from 'axios';
+iimport axios from 'axios';
+
+console.log("API URL:", import.meta.env.VITE_API_URL); // 👈 ADD HERE
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
+export default api;
 // Attach JWT on every request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
